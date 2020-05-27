@@ -9,7 +9,7 @@ const Cards=({data:{confirmed,recovered,deaths,lastUpdate}})=>{
     if(!confirmed)
     {
         console.log("hay");
-        return 'Loading......'
+        return 'Be Patient While I Load Myself......:)'
     }
     return(
 <div className={styles.container}>
@@ -25,7 +25,7 @@ const Cards=({data:{confirmed,recovered,deaths,lastUpdate}})=>{
                 separator=","/>
                 </Typography>
             <Typography color="textSecondary" >{moment(lastUpdate).format('LLLL')}</Typography>
-            <Typography variant="body2">Number of active casese in Covid19</Typography>
+            <Typography variant="body2">Number of active cases in Covid19</Typography>
         </CardContent>
     </Grid>
     <Grid item component={Card} xs={12} md={3} className={cx(styles.card,styles.recovered)}>
@@ -37,7 +37,7 @@ const Cards=({data:{confirmed,recovered,deaths,lastUpdate}})=>{
                 duration={2.5}
                 separator=","/></Typography>
             <Typography color="textSecondary" >{moment(lastUpdate).format('LLLL')}</Typography>
-            <Typography variant="body2">Number of recovered casese in Covid19</Typography>
+            <Typography variant="body2">Number of recovered cases in Covid19</Typography>
         </CardContent>
     </Grid>
     <Grid item component={Card} xs={12} md={3} className={cx(styles.card,styles.deaths)}>
@@ -51,7 +51,7 @@ const Cards=({data:{confirmed,recovered,deaths,lastUpdate}})=>{
                 separator=","/>
             </Typography>
     <Typography color="textSecondary" >{moment(lastUpdate).format('LLLL')}</Typography>
-            <Typography variant="body2">Number of Deaths casese in Covid19</Typography>
+            <Typography variant="body2">Number of Death cases in Covid19</Typography>
         </CardContent>
     </Grid>
 </Grid>
