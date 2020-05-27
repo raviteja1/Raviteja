@@ -10,7 +10,7 @@ try {
         deaths:data.deaths,
 lastUpdated:data.lastUpdate,
     }
-    console.log(Modifieddata);
+    console.log('no country'+Modifieddata);
     return Modifieddata;
 } catch (error) {
     console.log(error);
@@ -41,11 +41,12 @@ export const fetchDailydata = async () => {
         }
 
         export const fetchDataOfCountries = async (country) => {
-            
-        
-               let changeAbleUrl=`${url}/countries/${country}`;
+            let changeAbleUrl=`${url}/countries/${country}`;
+            if(country===''||country===null)
+            {
+                changeAbleUrl='https://covid19.mathdro.id/api';
                 console.log(changeAbleUrl);
-                      
+            }      
             try {
                 const {data}=await axios.get(changeAbleUrl);
                 const Modifieddata={
@@ -54,7 +55,6 @@ export const fetchDailydata = async () => {
                     deaths:data.deaths,
             lastUpdated:data.lastUpdate,
                 }
-                console.log(Modifieddata);
                 return Modifieddata;
             } catch (error) {
                 console.log(error);
