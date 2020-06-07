@@ -6,13 +6,13 @@
 }
 
 .infected{
-        border-bottom: 10px solid rgba(230, 86, 2, 0.678) !important;
+        border-bottom: 10px solid rgba(230, 27, 9, 0.87) !important;
 }
 .recovered{
-    border-bottom: 10px solid rgba(4, 4, 43, 0.5);
+    border-bottom: 10px solid #24e912c7;
 }
 .deaths{
-    border-bottom: 10px solid rgba(36, 219, 12, 0.5);
+    border-bottom: 10px solid #000000dc;
 }
 @media(max-width:770px){
     .card{
